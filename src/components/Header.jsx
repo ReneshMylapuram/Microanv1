@@ -15,7 +15,7 @@ export default function Header() {
         aria-label="Primary navigation"
       >
         <a href="#top" className="rounded-full focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1E4B4A]">
-          <LogoMark showWordmark className="h-9 w-9" />
+          <LogoMark showWordmark className="h-11 w-11" wordmarkClassName="hidden sm:inline" />
         </a>
         <div className="hidden items-center gap-1 rounded-full border border-[#1E4B4A]/10 bg-white/70 p-1 text-sm font-medium text-[#1E4B4A] shadow-sm md:flex">
           {navItems.map((item) => (

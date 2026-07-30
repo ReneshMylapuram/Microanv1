@@ -12,7 +12,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl rounded-[32px] border border-[#1E4B4A]/10 bg-white p-6 soft-shadow sm:p-8 lg:p-10">
         <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
           <div>
-            <LogoMark showWordmark className="h-10 w-10" />
+            <LogoMark showWordmark className="h-12 w-12" wordmarkClassName="text-2xl sm:text-3xl" />
             <p className="mt-6 max-w-xl text-base leading-7 text-[#1E4B4A]/72">
               Microan is a grassroots microlending fund converting community donations into small,
               low-interest loans for local continuity and resilience.

@@ -36,35 +36,13 @@ export default function Hero() {
 
         <div className="relative mx-auto h-[420px] w-full max-w-[520px] sm:h-[540px]" aria-hidden="true">
           <div className="absolute inset-x-6 top-8 h-[360px] rounded-[44px] border border-[#1E4B4A]/10 bg-white/76 soft-shadow sm:inset-x-2 sm:h-[470px]" />
-          <svg className="absolute inset-0 h-full w-full" viewBox="0 0 520 540" fill="none">
-            <path
-              d="M62 310C94 174 186 86 296 100C409 114 467 208 438 319C407 436 293 468 191 423C92 380 40 401 62 310Z"
-              fill="#A8C3A0"
-              opacity="0.24"
-            />
-            <path
-              d="M138 179C203 107 306 91 377 151C450 213 446 325 375 394C310 457 204 456 139 392C77 331 73 251 138 179Z"
-              stroke="#1E4B4A"
-              strokeWidth="2"
-              opacity="0.18"
-            />
-            <path
-              d="M160 176C205 126 279 115 331 156C385 199 384 277 333 328C286 374 210 373 162 326C117 282 116 225 160 176Z"
-              stroke="#A8C3A0"
-              strokeWidth="26"
-              strokeLinecap="round"
-              opacity="0.72"
-            />
-            <path
-              d="M356 364C311 414 237 425 185 384C131 341 132 263 183 212C230 166 306 167 354 214C399 258 400 315 356 364Z"
-              stroke="#1E4B4A"
-              strokeWidth="26"
-              strokeLinecap="round"
-              opacity="0.92"
-            />
-          </svg>
-          <div className="absolute left-8 top-16 rounded-[28px] bg-white p-5 soft-shadow sm:left-10">
-            <LogoMark className="h-16 w-16" />
+          <div className="absolute left-1/2 top-20 h-64 w-64 -translate-x-1/2 rounded-full border border-[#A8C3A0]/38 sm:top-24 sm:h-80 sm:w-80" />
+          <div className="absolute left-1/2 top-28 h-52 w-52 -translate-x-1/2 rounded-full bg-[#A8C3A0]/14 blur-3xl sm:top-32 sm:h-72 sm:w-72" />
+          <div className="absolute left-1/2 top-24 -translate-x-1/2 sm:top-28">
+            <LogoMark className="h-56 w-56 drop-shadow-2xl sm:h-72 sm:w-72" />
+          </div>
+          <div className="absolute left-3 top-16 rounded-[28px] bg-white px-5 py-4 soft-shadow sm:left-0">
+            <LogoMark showWordmark className="h-11 w-11" wordmarkClassName="text-lg sm:text-xl" />
           </div>
           <div className="absolute right-3 bottom-16 max-w-[240px] rounded-[28px] border border-[#1E4B4A]/10 bg-white p-5 soft-shadow sm:right-0">
             <p className="text-sm font-semibold tracking-[0.18em] text-[#1E4B4A]/60 uppercase">Current rate</p>
