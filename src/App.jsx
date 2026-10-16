@@ -1,38 +1,51 @@
 /*
-Component structure:
-- App composes Header, Hero, TransparencyDashboard, MoneyBreakdown, VisionMission, HowItWorks,
-  ImpactCredibility, and Footer as independent React sections.
-- Shared helpers are limited to AnimatedSection for subtle scroll reveals and LogoMark for the inline
-  teal/sage mutual-support motif.
-
-Design system:
-- Color tokens: deep teal #1E4B4A for primary text/actions, sage #A8C3A0 for accents, white/off-white
-  (#FFFFFF / #FBFAF6) for dominant backgrounds and cards.
-- Spacing scale: mobile-first generous padding using 20px page gutters, 48-72px section gaps on mobile,
-  and 96-128px vertical rhythm on larger screens.
-- Radius scale: 16px for small UI, 24px for cards, 32px for feature containers, full pills for nav/CTAs.
+  Microan design system
+  - Color tokens: yellow #ffe17c, charcoal #171e19, sage #b7c6c2, white, black.
+  - Spacing scale: roomy section padding (72-128px), 24px card gaps, 16px compact gaps, max content width 1180px.
+  - Borders: 2px black; hard offset shadows; geometric controls.
+  - Motion: single IntersectionObserver reveal class; 460ms ease-out fade/slide, with reduced-motion support in CSS.
+  - Data: user-supplied fund metrics and explicitly modeled savings in /src/data/fundData.js.
 */
 
-import Footer from "./components/Footer.jsx";
-import Header from "./components/Header.jsx";
-import Hero from "./components/Hero.jsx";
-import HowItWorks from "./components/HowItWorks.jsx";
-import ImpactCredibility from "./components/ImpactCredibility.jsx";
-import MoneyBreakdown from "./components/MoneyBreakdown.jsx";
-import TransparencyDashboard from "./components/TransparencyDashboard.jsx";
-import VisionMission from "./components/VisionMission.jsx";
+import { useEffect } from 'react';
+import Footer from './components/Footer.jsx';
+import Hero from './sections/Hero.jsx';
+import TransparencyDashboard from './sections/TransparencyDashboard.jsx';
+import MoneyBreakdown from './sections/MoneyBreakdown.jsx';
+import VisionMission from './sections/VisionMission.jsx';
+import HowItWorks from './sections/HowItWorks.jsx';
+import ImpactCredibility from './sections/ImpactCredibility.jsx';
+import Contact from './sections/Contact.jsx';
 
 export default function App() {
+  useEffect(() => {
+    const elements = document.querySelectorAll('[data-reveal]');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.18 },
+    );
+
+    elements.forEach((element) => observer.observe(element));
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div id="top" className="min-h-screen overflow-hidden bg-[#FBFAF6] text-[#1E4B4A]">
-      <Header />
+    <div className="min-h-screen bg-paper text-ink antialiased">
+      <Hero />
       <main>
-        <Hero />
         <TransparencyDashboard />
         <MoneyBreakdown />
         <VisionMission />
         <HowItWorks />
         <ImpactCredibility />
+        <Contact />
       </main>
       <Footer />
     </div>
