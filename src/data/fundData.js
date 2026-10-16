@@ -31,7 +31,7 @@ export const interestSavings = {
 };
 
 export const fundStats = [
-  { label: 'Current fund value', value: formatCurrency(fundMetrics.communityFund), detail: 'Community-raised capital available for lending and reserves.' },
+  { label: 'Current fund value', value: formatCurrency(fundMetrics.communityFund), detail: 'Capital available for lending and reserves.' },
   { label: 'Loans issued', value: String(fundMetrics.loansIssued), detail: `${formatCurrency(fundMetrics.cumulativeLending)} in cumulative lending through our community fund.` },
   { label: 'Average loan size', value: formatCurrency(fundMetrics.cumulativeLending / fundMetrics.loansIssued), detail: `Based on ${formatCurrency(fundMetrics.cumulativeLending)} in cumulative lending across ${fundMetrics.loansIssued} loans.` },
   { label: 'Funds deployed', value: `${fundMetrics.deployedPercent}%`, detail: `${formatCurrency(deployedCapital, 2)} currently outstanding in active loans, distinct from cumulative lending.` },
@@ -40,8 +40,8 @@ export const fundStats = [
 export const allocationData = [
   { label: 'Loans deployed', value: fundMetrics.deployedPercent, color: '#171e19' },
   { label: 'Reserve', value: 50, color: '#b7c6c2' },
-  { label: 'Operating costs', value: 2, color: '#ffe17c' },
+  { label: 'Operating costs', value: 2, color: '#a7c29f' },
   { label: 'Borrower support', value: 1, color: '#ffffff' },
 ];
 
-export const credibilityMarkers = ['Community-funded', `${interestRateLabel} simple interest`, 'Transparent reporting', 'Local review circle'];
+export const credibilityMarkers = ['Small-business focused', `${interestRateLabel} simple interest`, 'Transparent reporting', 'Individual review'];

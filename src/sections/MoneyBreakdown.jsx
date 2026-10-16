@@ -6,7 +6,7 @@ export default function MoneyBreakdown() {
     <SectionShell
       id="allocation"
       eyebrow="Where the money goes"
-      title="Donated dollars support active loans, with a deliberate reserve."
+      title="Fund capital supports active loans, with a deliberate reserve."
     >
       <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="donut-wrap" data-reveal>

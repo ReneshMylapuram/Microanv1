@@ -6,14 +6,12 @@ export default function ImpactCredibility() {
   return (
     <SectionShell
       id="impact"
-      title="Built to be understandable to donors, borrowers, and external reviewers."
       className="bg-white"
     >
       <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
         <TestimonialCarousel />
         <div className="cred-panel" data-reveal>
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal/60">Review-ready signals</p>
-          <div className="mt-6 grid gap-3 sm:grid-cols-2">
+          <div className="grid gap-3 sm:grid-cols-2">
             {credibilityMarkers.map((marker) => (
               <span className="cred-pill" key={marker}>{marker}</span>
             ))}

@@ -3,7 +3,7 @@ import { interestRateLabel } from '../data/fundData.js';
 
 const steps = [
   { title: 'Apply', text: 'Borrowers share the cash-flow need, timeline, and intended use of funds.' },
-  { title: 'Review', text: 'A local review circle evaluates fit, affordability, and repayment support.' },
+  { title: 'Review', text: 'Each application is reviewed for fit, affordability, and repayment support.' },
   { title: 'Fund', text: `Approved loans are issued at ${interestRateLabel} and reported in aggregate fund updates.` },
 ];
 

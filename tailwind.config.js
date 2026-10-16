@@ -6,7 +6,7 @@ export default {
       colors: {
         teal: '#171e19',
         sage: '#b7c6c2',
-        paper: '#ffe17c',
+        paper: '#a7c29f',
         mist: '#b7c6c2',
         ink: '#171e19',
       },

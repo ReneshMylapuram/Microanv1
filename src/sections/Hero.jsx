@@ -29,7 +29,7 @@ export default function Hero() {
       <div className="hero-content">
         <div className="hero-copy" data-reveal>
           <h1>Small loans.<br />Small businesses<br /><span className="outline-word">moving.</span></h1>
-          <p className="hero-description">Microan provides low-interest {interestRateLabel} liquidity loans to small businesses, funded entirely by community donations.</p>
+          <p className="hero-description">Microan provides low-interest {interestRateLabel} liquidity loans to small businesses.</p>
           <div className="hero-actions">
             <a className="btn-primary btn-large" href="#dashboard">See our impact <span aria-hidden="true">↗</span></a>
             <a className="btn-secondary btn-large" href={APPLY_URL} target="_blank" rel="noopener noreferrer">Apply</a>
@@ -38,8 +38,8 @@ export default function Hero() {
         <div className="fund-window" data-reveal aria-label="Community fund overview">
           <div className="window-chrome"><span className="window-dots" aria-hidden="true"><i /><i /><i /></span><span>MICROAN / COMMUNITY FUND</span><span aria-hidden="true">↗</span></div>
           <div className="window-body">
-            <div className="window-title"><span>Small fund. Real possibility.</span><span className="status-tag">Community-funded</span></div>
-            <div className="fund-total"><span>Community fund</span><strong>{formatCurrency(fundMetrics.communityFund)}</strong><p>Local capital. A shared way forward.</p></div>
+            <div className="window-title"><span>Small fund. Real possibility.</span><span className="status-tag">Small-business focused</span></div>
+            <div className="fund-total" aria-label="Current fund value"><strong>{formatCurrency(fundMetrics.communityFund)}</strong><p>Local capital. A shared way forward.</p></div>
             <div className="window-stats"><div><span>Loans issued</span><strong>{fundMetrics.loansIssued}<small> loans</small></strong></div><div><span>Simple interest</span><strong>{interestRateLabel}</strong></div></div>
             <div className="fund-allocation">
               <div><strong>Capital at work</strong><span>{fundMetrics.deployedPercent}% deployed</span></div>

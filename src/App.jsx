@@ -1,6 +1,6 @@
 /*
   Microan design system
-  - Color tokens: yellow #ffe17c, charcoal #171e19, sage #b7c6c2, white, black.
+  - Color tokens: muted green #a7c29f, charcoal #171e19, sage #b7c6c2, white, black.
   - Spacing scale: roomy section padding (72-128px), 24px card gaps, 16px compact gaps, max content width 1180px.
   - Borders: 2px black; hard offset shadows; geometric controls.
   - Motion: single IntersectionObserver reveal class; 460ms ease-out fade/slide, with reduced-motion support in CSS.

@@ -5,8 +5,8 @@ export default function TransparencyDashboard() {
   return (
     <SectionShell
       id="dashboard"
-      eyebrow="Fund transparency dashboard"
-      title="A clear view of what the community has built, lent, and kept ready."
+      eyebrow="Dashboard"
+      title="A clear view of the fund, loans issued, and capital kept ready."
       className="bg-white"
     >
       <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">

@@ -51,7 +51,7 @@ export default function TestimonialCarousel() {
       }}
     >
       <div className="testimonial-heading">
-        <p>Business voices</p>
+        <p>Testimonials</p>
         <button
           type="button"
           className="carousel-control carousel-play"
@@ -94,11 +94,13 @@ export default function TestimonialCarousel() {
             aria-hidden={index !== active}
           >
             {testimonial.quote ? <blockquote>“{testimonial.quote}”</blockquote> : (
-              <p className="testimonial-pending">{testimonial.temporary ? 'A future business story will appear here.' : 'A business story will appear here once an approved testimonial is available.'}</p>
+              <p className="testimonial-pending">A business story will appear here once an approved testimonial is available.</p>
             )}
             <figcaption>
               <strong>{testimonial.business}</strong>
-              <span>{testimonial.quote ? 'Existing testimonial · verification pending' : testimonial.temporary ? 'Temporary entry' : 'Testimonial pending'}</span>
+              {testimonial.quote
+                ? testimonial.attribution && <span>{testimonial.attribution}</span>
+                : <span>Testimonial pending</span>}
             </figcaption>
           </figure>
         ))}

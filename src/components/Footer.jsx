@@ -7,12 +7,12 @@ export default function Footer() {
         <div className="max-w-md">
           <Logo />
           <p className="mt-5 text-base leading-7 text-ink/70">
-            Microan turns community donations into small, transparent loans that help small businesses stay solvent, independent, and moving.
+            Microan provides small, transparent loans that help small businesses stay solvent, independent, and moving.
           </p>
         </div>
         <nav className="flex flex-wrap gap-3 text-sm font-medium" aria-label="Footer navigation">
           <a className="pill-link" href="mailto:gunawanconnor@gmail.com">gunawanconnor@gmail.com</a>
-          <a className="pill-link" href="tel:7626995254">762-699-52-54</a>
+          <a className="pill-link" href="tel:7626995254">762-699-5254</a>
           <a className="pill-link" href="#dashboard">Transparency</a>
           <a className="pill-link" href="#impact">Impact</a>
           <a className="pill-link" href="#top">Back to top</a>
